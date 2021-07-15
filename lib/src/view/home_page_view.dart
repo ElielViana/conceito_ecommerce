@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               Container(
-                padding: EdgeInsets.only(top: 45, left: 20, right: 20),
+                padding: EdgeInsets.only(top: 35, left: 20, right: 20),
                 child: TextField(
                     decoration: InputDecoration(
                   hintText: "Search",
@@ -95,19 +95,112 @@ class _HomePageState extends State<HomePage> {
                   ),
                 )),
               ),
+              Container(
+                height: screen.height * 0.20,
+                width: screen.width,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.indigoAccent),
+                      child: Center(
+                        child: Text(
+                          "All",
+                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.indigoAccent),
+                      child: Center(
+                        child: Text(
+                          "All",
+                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.indigoAccent),
+                      child: Center(
+                        child: Text(
+                          "All",
+                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.indigoAccent),
+                      child: Center(
+                        child: Text(
+                          "All",
+                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.indigoAccent),
+                      child: Center(
+                        child: Text(
+                          "All",
+                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 30, top: 50),
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.indigoAccent),
-                    child: Center(
-                      child: Text(
-                        "All",
-                        style: TextStyle(fontSize: 30, color: Colors.white),
-                      ),
+                    padding: EdgeInsets.only(
+                        left: 20, top: 0, bottom: 20, right: 20),
+                    width: screen.width / 2,
+                    height: 50,
+                    child: Row(
+                      children: [
+                        Text(
+                          "All cars",
+                          style: TextStyle(
+                            fontSize: 25,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(
+                        left: 20, top: 0, bottom: 20, right: 20),
+                    width: screen.width / 2,
+                    height: 50,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(
+                          Icons.filter_alt_sharp,
+                          size: 35,
+                          color: Colors.black,
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -119,3 +212,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
+/**https://dribbble.com/shots/16039824-Split-Mobile-App-Design-for-Car-Rent/attachments/7883594?mode=media */
