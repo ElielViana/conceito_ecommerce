@@ -12,11 +12,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     screen = MediaQuery.of(context).size;
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Container(
           height: screen.height,
           width: screen.width,
-          color: Colors.white,
+          color: Colors.grey[100],
           child: Column(
             children: [
               Row(
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     padding: EdgeInsets.only(top: 40, left: 25),
                     width: screen.width / 2,
-                    height: screen.height * 0.12,
+                    height: screen.height * 0.122,
                     //color: Colors.blue,
                     child: Row(
                       children: [
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     padding: EdgeInsets.only(top: 40, right: 25),
                     width: screen.width / 2,
-                    height: screen.height * 0.12,
+                    height: screen.height * 0.122,
                     //color: Colors.blue,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -86,18 +86,19 @@ class _HomePageState extends State<HomePage> {
                     decoration: InputDecoration(
                   hintText: "Search",
                   hintStyle: TextStyle(
-                    fontSize: 25,
+                    fontSize: 22,
                   ),
                   suffixIcon: Icon(
                     Icons.search,
-                    size: 35,
+                    size: 30,
                     color: Colors.black,
                   ),
                 )),
               ),
               Container(
-                height: screen.height * 0.20,
+                height: screen.height * 0.12,
                 width: screen.width,
+                // color: Colors.blue,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
@@ -106,11 +107,50 @@ class _HomePageState extends State<HomePage> {
                       width: 75,
                       height: 75,
                       decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.indigoAccent),
+                          shape: BoxShape.circle, color: Color(0xFF5a6efd)),
                       child: Center(
                         child: Text(
                           "All",
-                          style: TextStyle(fontSize: 30, color: Colors.white),
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: Center(
+                        child: Image.network(
+                          "https://img2.gratispng.com/20180720/gwk/kisspng-volkswagen-beetle-car-volkswagen-gol-volkswagen-18-istanbul-background-5b518d3c54b186.1451426715320712283469.jpg",
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.white),
+                      child: Center(
+                        child: Image.network(
+                          "https://w7.pngwing.com/pngs/286/593/png-transparent-tesla-roadster-tesla-motors-tesla-model-s-tesla-model-x-tesla-angle-logo-car.png",
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(14),
+                      width: 75,
+                      height: 75,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.white),
+                      child: Center(
+                        child: Image.network(
+                          "https://w7.pngwing.com/pngs/584/35/png-transparent-toyota-corolla-car-toyota-camry-logo-toyota.png",
+                          // fit: BoxFit.contain,
                         ),
                       ),
                     ),
@@ -123,46 +163,7 @@ class _HomePageState extends State<HomePage> {
                       child: Center(
                         child: Text(
                           "All",
-                          style: TextStyle(fontSize: 30, color: Colors.white),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(14),
-                      width: 75,
-                      height: 75,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.indigoAccent),
-                      child: Center(
-                        child: Text(
-                          "All",
-                          style: TextStyle(fontSize: 30, color: Colors.white),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(14),
-                      width: 75,
-                      height: 75,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.indigoAccent),
-                      child: Center(
-                        child: Text(
-                          "All",
-                          style: TextStyle(fontSize: 30, color: Colors.white),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(14),
-                      width: 75,
-                      height: 75,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.indigoAccent),
-                      child: Center(
-                        child: Text(
-                          "All",
-                          style: TextStyle(fontSize: 30, color: Colors.white),
+                          style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ),
                     )
@@ -173,7 +174,8 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Container(
                     padding: EdgeInsets.only(
-                        left: 20, top: 0, bottom: 20, right: 20),
+                      left: 20,
+                    ),
                     width: screen.width / 2,
                     height: 50,
                     child: Row(
@@ -181,15 +183,14 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "All cars",
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 23,
                           ),
                         )
                       ],
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(
-                        left: 20, top: 0, bottom: 20, right: 20),
+                    padding: EdgeInsets.only(right: 20),
                     width: screen.width / 2,
                     height: 50,
                     child: Row(
@@ -197,14 +198,234 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Icon(
                           Icons.filter_alt_sharp,
-                          size: 35,
+                          size: 30,
                           color: Colors.black,
                         ),
                       ],
                     ),
                   ),
                 ],
-              )
+              ),
+              Container(
+                // color: Colors.red,
+                margin: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
+                width: screen.width,
+                height: screen.height * 0.50,
+                child: ListView(
+                  children: [
+                    Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Container(
+                          margin: EdgeInsets.all(20.0),
+                          // color: Colors.blue,
+                          height: screen.height * 0.12,
+                          width: screen.width,
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                  child: Container(
+                                color: Colors.blue,
+                                child: Image.network(
+                                  "https://heycar.com.br/images/2016/Novembro/328-M.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              )),
+                              Expanded(
+                                  child: Container(
+                                margin: EdgeInsets.only(left: 20),
+                                // color: Colors.purple,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "BMW 328",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Altomatic",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "\$150/day",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.indigoAccent,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )),
+                            ],
+                          ),
+                        )),
+                    Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Container(
+                          margin: EdgeInsets.all(20.0),
+                          // color: Colors.blue,
+                          height: screen.height * 0.12,
+                          width: screen.width,
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                  child: Container(
+                                color: Colors.blue,
+                                child: Image.network(
+                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiQPFMiB6xYnS3lOceyXkmI0qS-NZjVt-ATw&usqp=CAU",
+                                  fit: BoxFit.cover,
+                                ),
+                              )),
+                              Expanded(
+                                  child: Container(
+                                margin: EdgeInsets.only(left: 20),
+                                // color: Colors.purple,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Toyota Yaris",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Altomatic",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "\$75/day",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.indigoAccent,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )),
+                            ],
+                          ),
+                        )),
+                    Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Container(
+                          margin: EdgeInsets.all(20.0),
+                          // color: Colors.blue,
+                          height: screen.height * 0.12,
+                          width: screen.width,
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                  child: Container(
+                                // color: Colors.blue,
+                                child: Image.network(
+                                  "https://chargeguru.com/pt/wp-content/uploads/sites/3/revslider/vehiculo-tesla-s/tesla-model-s-2018.png",
+                                  fit: BoxFit.cover,
+                                ),
+                              )),
+                              Expanded(
+                                  child: Container(
+                                margin: EdgeInsets.only(left: 20),
+                                // color: Colors.purple,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Tesla Model S",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Altomatic",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "\$200/day",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.indigoAccent,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )),
+                            ],
+                          ),
+                        )),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(25),
+                      topLeft: Radius.circular(25),
+                    ),
+                    color: Color(0xFF282F66),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.home,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 90,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.watchmanMonitoring,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 90,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.fileUpload,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 90,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.user,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -213,5 +434,29 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-
 /**https://dribbble.com/shots/16039824-Split-Mobile-App-Design-for-Car-Rent/attachments/7883594?mode=media */
+
+/**https Container(
+                  margin: EdgeInsets.all(20),
+                  width: screen.width,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: ),
+                  // color: Colors.green,
+                  height: screen.height * 0.40,
+                  child: Column(
+                    children: [
+                      Card(
+                          child: Container(
+                        margin: EdgeInsets.all(20.0),
+                        width: screen.width,
+                        padding: EdgeInsets.all(30.0),
+                        child: Column(
+                          children: <Widget>[
+                            Text('Macoratti .net'),
+                            Text('Quase tudo para .NET')
+                          ],
+                        ),
+                      ))
+                    ],
+                  ),
+                ), */
