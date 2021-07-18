@@ -16,34 +16,37 @@ class _HomePageState extends State<HomePage> {
         child: Container(
           height: screen.height,
           width: screen.width,
-          color: Colors.grey[100],
+          color: Color(0xfff6f8fc),
           child: Column(
             children: [
               Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(top: 40, left: 25),
+                    padding: EdgeInsets.only(top: 40, left: 25, right: 120),
                     width: screen.width / 2,
-                    height: screen.height * 0.122,
-                    //color: Colors.blue,
+                    height: screen.height * 0.12,
+                    // color: Colors.blue,
                     child: Row(
                       children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Container(
-                            height: 80,
-                            child: Center(
-                              child: FaIcon(
-                                FontAwesomeIcons.slidersH,
-                                color: Colors.black,
+                        SizedBox(
+                          width: 55,
+                          height: 50,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Container(
+                              child: Center(
+                                child: FaIcon(
+                                  FontAwesomeIcons.slidersH,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                            shape: new RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(15),
-                                side: BorderSide(color: Colors.grey)),
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  side: BorderSide(color: Colors.grey)),
+                            ),
                           ),
                         ),
                       ],
@@ -53,26 +56,29 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.only(top: 40, right: 25),
                     width: screen.width / 2,
                     height: screen.height * 0.122,
-                    //color: Colors.blue,
+                    // color: Colors.green,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Container(
-                            // height: 80,
-                            child: Center(
-                              child: FaIcon(
-                                FontAwesomeIcons.bell,
-                                color: Colors.black,
+                        SizedBox(
+                          width: 55,
+                          height: 50,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Container(
+                              child: Center(
+                                child: FaIcon(
+                                  FontAwesomeIcons.bell,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                            shape: new RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(15),
-                                side: BorderSide(color: Colors.grey)),
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                              shape: new RoundedRectangleBorder(
+                                  borderRadius: new BorderRadius.circular(10),
+                                  side: BorderSide(color: Colors.grey)),
+                            ),
                           ),
                         ),
                       ],
@@ -81,21 +87,23 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               Container(
-                padding: EdgeInsets.only(top: 35, left: 20, right: 20),
+                padding:
+                    EdgeInsets.only(top: 25, left: 20, right: 20, bottom: 20),
                 child: TextField(
                     decoration: InputDecoration(
                   hintText: "Search",
                   hintStyle: TextStyle(
-                    fontSize: 22,
+                    fontSize: 20,
                   ),
                   suffixIcon: Icon(
                     Icons.search,
-                    size: 30,
+                    size: 28,
                     color: Colors.black,
                   ),
                 )),
               ),
               Container(
+                margin: EdgeInsets.only(bottom: 10),
                 height: screen.height * 0.12,
                 width: screen.width,
                 // color: Colors.blue,
@@ -106,8 +114,14 @@ class _HomePageState extends State<HomePage> {
                       margin: EdgeInsets.all(14),
                       width: 75,
                       height: 75,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Color(0xFF5a6efd)),
+                      decoration: BoxDecoration(boxShadow: [
+                        // color: Color(0xFF5a6efd)
+                        BoxShadow(
+                          color: Color(0xFF5a6efd),
+                          blurRadius: 1.0, // soften the shadow
+                          spreadRadius: 1.0, //extend the shadow
+                        )
+                      ], shape: BoxShape.circle, color: Color(0xFF5a6efd)),
                       child: Center(
                         child: Text(
                           "All",
@@ -117,6 +131,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Container(
                       margin: EdgeInsets.all(14),
+                      padding: EdgeInsets.all(14),
                       width: 75,
                       height: 75,
                       decoration: BoxDecoration(
@@ -124,35 +139,42 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.white,
                       ),
                       child: Center(
-                        child: Image.network(
-                          "https://img2.gratispng.com/20180720/gwk/kisspng-volkswagen-beetle-car-volkswagen-gol-volkswagen-18-istanbul-background-5b518d3c54b186.1451426715320712283469.jpg",
-                        ),
-                      ),
+                          child: Image.asset(
+                        "assets/images/vw.jpg",
+                        fit: BoxFit.fitHeight,
+                      )
+                          // Image.network(
+                          //   "https://img2.gratispng.com/20180720/gwk/kisspng-volkswagen-beetle-car-volkswagen-gol-volkswagen-18-istanbul-background-5b518d3c54b186.1451426715320712283469.jpg",
+                          // ),
+                          ),
                     ),
                     Container(
                       margin: EdgeInsets.all(14),
+                      padding: EdgeInsets.all(14),
                       width: 75,
                       height: 75,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, color: Colors.white),
                       child: Center(
-                        child: Image.network(
-                          "https://w7.pngwing.com/pngs/286/593/png-transparent-tesla-roadster-tesla-motors-tesla-model-s-tesla-model-x-tesla-angle-logo-car.png",
-                        ),
-                      ),
+                          child: Image.asset("assets/images/toyota.png",
+                              fit: BoxFit.cover)
+                          //  Image.network(
+                          //   "https://w7.pngwing.com/pngs/286/593/png-transparent-tesla-roadster-tesla-motors-tesla-model-s-tesla-model-x-tesla-angle-logo-car.png",
+                          // ),
+                          ),
                     ),
                     Container(
                       margin: EdgeInsets.all(14),
+                      padding: EdgeInsets.all(10),
                       width: 75,
                       height: 75,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, color: Colors.white),
                       child: Center(
-                        child: Image.network(
-                          "https://w7.pngwing.com/pngs/584/35/png-transparent-toyota-corolla-car-toyota-camry-logo-toyota.png",
-                          // fit: BoxFit.contain,
-                        ),
-                      ),
+                          child: Image.asset(
+                        "assets/images/tesla.png",
+                        fit: BoxFit.contain,
+                      )),
                     ),
                     Container(
                       margin: EdgeInsets.all(14),
@@ -183,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "All cars",
                           style: TextStyle(
-                            fontSize: 23,
+                            fontSize: 21,
                           ),
                         )
                       ],
@@ -197,7 +219,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Icon(
-                          Icons.filter_alt_sharp,
+                          Icons.filter_alt_outlined,
                           size: 30,
                           color: Colors.black,
                         ),
@@ -213,7 +235,7 @@ class _HomePageState extends State<HomePage> {
                   right: 20,
                 ),
                 width: screen.width,
-                height: screen.height * 0.50,
+                height: screen.height * 0.49,
                 child: ListView(
                   children: [
                     Card(
@@ -221,14 +243,14 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(30)),
                         child: Container(
                           margin: EdgeInsets.all(20.0),
-                          // color: Colors.blue,
                           height: screen.height * 0.12,
                           width: screen.width,
                           child: Row(
                             children: <Widget>[
                               Expanded(
                                   child: Container(
-                                color: Colors.blue,
+                                // color: Colors.blue,
+                                decoration: BoxDecoration(),
                                 child: Image.network(
                                   "https://heycar.com.br/images/2016/Novembro/328-M.jpg",
                                   fit: BoxFit.cover,
@@ -386,6 +408,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Expanded(
                 child: Container(
+                  // margin: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(25),
@@ -406,21 +429,21 @@ class _HomePageState extends State<HomePage> {
                       ),
                       FaIcon(
                         FontAwesomeIcons.watchmanMonitoring,
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                       SizedBox(
                         width: 90,
                       ),
                       FaIcon(
                         FontAwesomeIcons.fileUpload,
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                       SizedBox(
                         width: 90,
                       ),
                       FaIcon(
                         FontAwesomeIcons.user,
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                     ],
                   ),
