@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^9.0.0
+  imageview360: ^1.2.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -49,6 +50,47 @@ flutter:
     - assets/images/vw.jpg
     - assets/images/toyota.png
     - assets/images/tesla.png
+    - assets/images/bmw.jpg
+    - assets/images/yaris.jpg
+    - assets/images/teslaa.png
+    - assets/images/car/1.jpg
+    - assets/images/car/2.jpg
+    - assets/images/car/3.jpg
+    - assets/images/car/4.jpg
+    - assets/images/car/5.jpg
+    - assets/images/car/6.jpg
+    - assets/images/car/7.jpg
+    - assets/images/car/8.jpg
+    - assets/images/car/9.jpg
+    - assets/images/car/10.jpg
+    - assets/images/car/11.jpg
+    - assets/images/car/12.jpg
+    - assets/images/car/13.jpg
+    - assets/images/car/14.jpg
+    - assets/images/car/15.jpg
+    - assets/images/car/16.jpg
+    - assets/images/car/17.jpg
+    - assets/images/car/18.jpg
+    - assets/images/car/19.jpg
+    - assets/images/car/20.jpg
+    - assets/images/car/21.jpg
+    - assets/images/car/22.jpg
+    - assets/images/car/23.jpg
+    - assets/images/car/24.jpg
+    - assets/images/car/25.jpg
+    - assets/images/car/26.jpg
+    - assets/images/car/27.jpg
+    - assets/images/car/28.jpg
+    - assets/images/car/29.jpg
+    - assets/images/car/30.jpg
+    - assets/images/car/31.jpg
+    - assets/images/car/32.jpg
+    - assets/images/car/33.jpg
+    - assets/images/car/34.jpg
+    - assets/images/car/35.jpg
+    - assets/images/car/36.jpg
+
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

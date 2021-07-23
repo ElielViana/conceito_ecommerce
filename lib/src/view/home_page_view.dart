@@ -1,3 +1,5 @@
+// @dart=2.9
+import 'package:conceito_e_commerce/src/view/item_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -7,7 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late Size screen;
+  Size screen;
   @override
   Widget build(BuildContext context) {
     screen = MediaQuery.of(context).size;
@@ -37,6 +39,7 @@ class _HomePageState extends State<HomePage> {
                               child: Center(
                                 child: FaIcon(
                                   FontAwesomeIcons.slidersH,
+                                  size: 20,
                                   color: Colors.black,
                                 ),
                               ),
@@ -69,6 +72,7 @@ class _HomePageState extends State<HomePage> {
                               child: Center(
                                 child: FaIcon(
                                   FontAwesomeIcons.bell,
+                                  size: 22,
                                   color: Colors.black,
                                 ),
                               ),
@@ -241,56 +245,69 @@ class _HomePageState extends State<HomePage> {
                     Card(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
-                        child: Container(
-                          margin: EdgeInsets.all(20.0),
-                          height: screen.height * 0.12,
-                          width: screen.width,
-                          child: Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                // color: Colors.blue,
-                                decoration: BoxDecoration(),
-                                child: Image.network(
-                                  "https://heycar.com.br/images/2016/Novembro/328-M.jpg",
-                                  fit: BoxFit.cover,
-                                ),
-                              )),
-                              Expanded(
-                                  child: Container(
-                                margin: EdgeInsets.only(left: 20),
-                                // color: Colors.purple,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "BMW 328",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      "Altomatic",
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      "\$150/day",
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.indigoAccent,
+                        child: InkWell(
+                          // focusColor: Colors.white,
+                          highlightColor: Colors.white,
+                          hoverColor: Colors.white,
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemDetails()),
+                            );
+                          },
+                          child: Container(
+                            margin: EdgeInsets.all(20.0),
+                            height: screen.height * 0.12,
+                            width: screen.width,
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                    child: Container(
+                                  // color: Colors.blue,
+                                  decoration: BoxDecoration(),
+                                  child: Image.asset(
+                                    "assets/images/bmw.jpg",
+                                    fit: BoxFit.cover,
+                                  ),
+                                )),
+                                Expanded(
+                                    child: Container(
+                                  margin: EdgeInsets.only(left: 20),
+                                  // color: Colors.purple,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "BMW 328",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              )),
-                            ],
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
+                                        "Altomatic",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
+                                        "\$150/day",
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.indigoAccent,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )),
+                              ],
+                            ),
                           ),
                         )),
                     Card(
@@ -306,8 +323,8 @@ class _HomePageState extends State<HomePage> {
                               Expanded(
                                   child: Container(
                                 color: Colors.blue,
-                                child: Image.network(
-                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiQPFMiB6xYnS3lOceyXkmI0qS-NZjVt-ATw&usqp=CAU",
+                                child: Image.asset(
+                                  "assets/images/yaris.jpg",
                                   fit: BoxFit.cover,
                                 ),
                               )),
@@ -361,8 +378,8 @@ class _HomePageState extends State<HomePage> {
                               Expanded(
                                   child: Container(
                                 // color: Colors.blue,
-                                child: Image.network(
-                                  "https://chargeguru.com/pt/wp-content/uploads/sites/3/revslider/vehiculo-tesla-s/tesla-model-s-2018.png",
+                                child: Image.asset(
+                                  "assets/images/teslaa.png",
                                   fit: BoxFit.cover,
                                 ),
                               )),
