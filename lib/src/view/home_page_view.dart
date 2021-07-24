@@ -475,28 +475,3 @@ class _HomePageState extends State<HomePage> {
 }
 
 /**https://dribbble.com/shots/16039824-Split-Mobile-App-Design-for-Car-Rent/attachments/7883594?mode=media */
-
-/**https Container(
-                  margin: EdgeInsets.all(20),
-                  width: screen.width,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: ),
-                  // color: Colors.green,
-                  height: screen.height * 0.40,
-                  child: Column(
-                    children: [
-                      Card(
-                          child: Container(
-                        margin: EdgeInsets.all(20.0),
-                        width: screen.width,
-                        padding: EdgeInsets.all(30.0),
-                        child: Column(
-                          children: <Widget>[
-                            Text('Macoratti .net'),
-                            Text('Quase tudo para .NET')
-                          ],
-                        ),
-                      ))
-                    ],
-                  ),
-                ), */

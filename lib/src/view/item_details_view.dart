@@ -101,7 +101,15 @@ class _ItemDetailsState extends State<ItemDetails> {
                           key: UniqueKey(),
                           imageList: imageList,
                         )
-                      : CircularProgressIndicator(),
+                      : Expanded(
+                          child: Container(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              CircularProgressIndicator(),
+                            ],
+                          ),
+                        ))
                 ],
               ),
             ),
